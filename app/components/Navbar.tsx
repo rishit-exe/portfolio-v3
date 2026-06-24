@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 
 const NAV_LINKS = [
+  { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
@@ -158,8 +159,8 @@ export default function Navbar() {
                     ? i === 0
                       ? "translateY(6.5px) rotate(45deg)"
                       : i === 2
-                      ? "translateY(-6.5px) rotate(-45deg)"
-                      : "none"
+                        ? "translateY(-6.5px) rotate(-45deg)"
+                        : "none"
                     : "none",
                 opacity: menuOpen && i === 1 ? 0 : 1,
               }}

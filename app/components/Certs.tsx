@@ -141,7 +141,7 @@ export default function Certs() {
       id="certs"
       style={{ padding: "100px 48px", borderTop: "1px solid var(--rule)" }}
     >
-      <SectionHeader num="04" title="Certifications" />
+      <SectionHeader num="05" title="Certifications" />
       <div
         style={{
           display: "grid",

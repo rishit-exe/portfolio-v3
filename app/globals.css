@@ -12,6 +12,8 @@
   --accent-rgb: 26, 86, 219;
   --accent-light: #EBF0FD;
   --r: 3px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 [data-theme="dark"] {

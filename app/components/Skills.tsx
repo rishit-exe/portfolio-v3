@@ -73,7 +73,7 @@ export default function Skills() {
       ref={ref}
       style={{ padding: "100px 48px", borderTop: "1px solid var(--rule)" }}
     >
-      <SectionHeader num="03" title="Technical Skills" />
+      <SectionHeader num="04" title="Technical Skills" />
 
       <div
         style={{

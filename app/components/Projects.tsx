@@ -153,7 +153,7 @@ export default function Projects() {
       id="projects"
       style={{ padding: "100px 48px", borderTop: "1px solid var(--rule)" }}
     >
-      <SectionHeader num="02" title="Projects" />
+      <SectionHeader num="03" title="Projects" />
       <div
         style={{
           display: "grid",
