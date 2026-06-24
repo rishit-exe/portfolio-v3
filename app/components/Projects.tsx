@@ -10,7 +10,7 @@ const PROJECTS = [
     title: "Certiqo",
     desc: "Production-grade batch asset generation platform. Processes CSV datasets via a custom lightweight parser with server-side graphic manipulation, real-time Node stream archiving, and a PostgreSQL-backed public verification API.",
     stack: ["Next.js", "TypeScript", "Supabase", "Sharp.js", "Node Streams", "PostgreSQL"],
-    link: "#",
+    link: "https://github.com/rishit-exe/Certiqo",
     linkLabel: "View Project",
   },
   {
@@ -18,17 +18,17 @@ const PROJECTS = [
     title: "AcademiaFortress",
     desc: "Android application with a deterministic rule-based calendar engine for adaptive schedule computation. Features localized data caching, visual progression timeline graphs, and optimized background execution cycles.",
     stack: ["Java", "Android SDK", "SQLite", "Custom Cache Layer"],
-    link: "#",
+    link: "https://github.com/rishit-exe/AcademiaFortress",
     linkLabel: "View Project",
   },
-  {
-    num: "P.03",
-    title: "SLAM Evaluation Platform",
-    desc: "Asynchronous multimodal SLAM evaluation system at Samsung R&D. Leverages ROS2 computational graphs to isolate data pipeline latencies across heterogeneous sensor arrays for autonomous systems research.",
-    stack: ["ROS2", "Python", "C++", "NumPy", "Sensor Fusion"],
-    link: "#",
-    linkLabel: "Research Project",
-  },
+  // {
+  //   num: "P.03",
+  //   title: "SLAM Evaluation Platform",
+  //   desc: "Asynchronous multimodal SLAM evaluation system at Samsung R&D. Leverages ROS2 computational graphs to isolate data pipeline latencies across heterogeneous sensor arrays for autonomous systems research.",
+  //   stack: ["ROS2", "Python", "C++", "NumPy", "Sensor Fusion"],
+  //   link: "#",
+  //   linkLabel: "Research Project",
+  // },
 ];
 
 function TiltCard({ project, index }: { project: typeof PROJECTS[0]; index: number }) {
@@ -138,8 +138,8 @@ function TiltCard({ project, index }: { project: typeof PROJECTS[0]; index: numb
         >
           {project.linkLabel}
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
           </svg>
         </a>
       </div>
@@ -153,7 +153,7 @@ export default function Projects() {
       id="projects"
       style={{ padding: "100px 48px", borderTop: "1px solid var(--rule)" }}
     >
-      <SectionHeader num="03" title="Projects" />
+      <SectionHeader num="04" title="Projects" />
       <div
         style={{
           display: "grid",

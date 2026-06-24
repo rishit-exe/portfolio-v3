@@ -51,7 +51,7 @@ export default function Contact() {
               <span style={{ color: "var(--accent)" }}>remarkable.</span>
             </h2>
             <p style={{ fontSize: "0.9375rem", color: "var(--ink2)", lineHeight: 1.7, maxWidth: 380 }}>
-              Open to senior engineering roles, research collaborations, and interesting problems.
+              Open to intern/fresher engineering roles, research collaborations, and interesting problems.
               Currently based in Chennai, India.
             </p>
           </motion.div>
@@ -119,7 +119,7 @@ export default function Contact() {
         className="site-footer"
       >
         <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.6875rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
-          © 2026 Rishit Srivastava. Built with Next.js.
+          © 2026 Rishit Srivastava.
         </p>
         <div style={{ display: "flex", gap: 24 }}>
           {[

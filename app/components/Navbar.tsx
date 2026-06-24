@@ -220,36 +220,49 @@ export default function Navbar() {
 }
 
 function ThemeToggle({ theme, onToggle }: { theme: string; onToggle: () => void }) {
+  const isDark = theme === "dark";
   return (
     <button
       onClick={onToggle}
       aria-label="Toggle theme"
       style={{
-        width: 40,
-        height: 23,
-        background: theme === "dark" ? "var(--accent)" : "var(--rule)",
-        borderRadius: 12,
-        position: "relative",
+        background: "none",
         border: "none",
         cursor: "none",
-        transition: "background 0.3s",
+        color: "var(--ink)",
+        padding: 6,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        transition: "color 0.2s, transform 0.3s cubic-bezier(0.16,1,0.3,1)",
         flexShrink: 0,
       }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.color = "var(--accent)";
+        e.currentTarget.style.transform = "scale(1.1) rotate(15deg)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.color = "var(--ink)";
+        e.currentTarget.style.transform = "scale(1) rotate(0deg)";
+      }}
     >
-      <span
-        style={{
-          position: "absolute",
-          width: 17,
-          height: 17,
-          background: "white",
-          borderRadius: "50%",
-          top: 3,
-          left: 3,
-          boxShadow: "0 1px 4px rgba(0,0,0,0.2)",
-          transition: "transform 0.3s cubic-bezier(0.16,1,0.3,1)",
-          transform: theme === "dark" ? "translateX(17px)" : "translateX(0)",
-        }}
-      />
+      {isDark ? (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2"/>
+          <path d="M12 20v2"/>
+          <path d="M4.93 4.93l1.41 1.41"/>
+          <path d="M17.66 17.66l1.41 1.41"/>
+          <path d="M2 12h2"/>
+          <path d="M20 12h2"/>
+          <path d="M6.34 17.66l-1.41 1.41"/>
+          <path d="M19.07 4.93l-1.41 1.41"/>
+        </svg>
+      ) : (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+        </svg>
+      )}
     </button>
   );
 }

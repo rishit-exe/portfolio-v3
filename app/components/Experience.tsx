@@ -125,7 +125,7 @@ export default function Experience() {
         borderTop: "1px solid var(--rule)",
       }}
     >
-      <SectionHeader num="02" title="Experience" />
+      <SectionHeader num="03" title="Experience" />
       <div>
         {EXPERIENCES.map((exp, i) => (
           <ExpItem key={exp.company} exp={exp} index={i} />

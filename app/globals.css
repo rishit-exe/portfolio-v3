@@ -14,6 +14,11 @@
   --r: 3px;
   --font-display: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(13, 13, 13, 0.08);
+  --glass-border-hover: rgba(26, 86, 219, 0.4);
+  --glass-glow: rgba(0, 0, 0, 0.08);
+  --glass-glow-hover: rgba(26, 86, 219, 0.12);
 }
 
 [data-theme="dark"] {
@@ -27,6 +32,11 @@
   --accent: #4F7EF7;
   --accent-rgb: 79, 126, 247;
   --accent-light: #141C2E;
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-hover: rgba(79, 126, 247, 0.5);
+  --glass-glow: rgba(0, 0, 0, 0.4);
+  --glass-glow-hover: rgba(79, 126, 247, 0.25);
 }
 
 * {
