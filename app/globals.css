@@ -27,7 +27,11 @@
   --accent-light: #141C2E;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
   scroll-behavior: smooth;
@@ -43,7 +47,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  body { cursor: auto; }
+  body {
+    cursor: auto;
+  }
 }
 
 ::selection {
@@ -52,35 +58,83 @@ body {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeLeft {
-  from { opacity: 0; transform: translateX(32px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0.4deg); }
-  50% { transform: translateY(-10px) rotate(-0.4deg); }
-}
-@keyframes scramble-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.float-1 { animation: float 5s ease-in-out infinite; }
-.float-2 { animation: float 5.5s ease-in-out 1.5s infinite; }
-.float-3 { animation: float 6s ease-in-out 3s infinite; }
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+  from {
+    opacity: 0;
+    transform: translateY(24px);
   }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0.4deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-0.4deg);
+  }
+}
+
+@keyframes scramble-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.float-1 {
+  animation: float 5s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.float-2 {
+  animation: float 5.5s ease-in-out 1.5s infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.float-3 {
+  animation: float 6s ease-in-out 3s infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
