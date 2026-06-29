@@ -2,14 +2,15 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { RESUME_URL } from "@/app/lib/constants";
 
 const CONTACTS = [
   { label: "Email", value: "rishit.vns05@gmail.com", href: "mailto:rishit.vns05@gmail.com" },
-  { label: "Phone", value: "+91 9454696069", href: "tel:+919454696069" },
+  // { label: "Phone", value: "+91 9454696069", href: "tel:+919454696069" },
   { label: "LinkedIn", value: "linkedin.com/in/rishit-srivastava", href: "https://linkedin.com/in/rishit-srivastava" },
   { label: "GitHub", value: "github.com/rishit-exe", href: "https://github.com/rishit-exe" },
   { label: "Website", value: "rishit-exe.xyz", href: "https://rishit-exe.xyz" },
-  { label: "Resume", value: "View on Google Drive →", href: "https://drive.google.com/file/d/1pk-SruRoF2IJT8xAHWIipQ9BXWBNoWbQ/view?usp=sharing" },
+  { label: "Resume", value: "View on Google Drive →", href: RESUME_URL },
 ];
 
 export default function Contact() {
@@ -125,7 +126,7 @@ export default function Contact() {
           {[
             { label: "GitHub", href: "https://github.com/rishit-exe" },
             { label: "LinkedIn", href: "https://linkedin.com/in/rishit-srivastava" },
-            { label: "Resume", href: "https://drive.google.com/file/d/1pk-SruRoF2IJT8xAHWIipQ9BXWBNoWbQ/view?usp=sharing" },
+            { label: "Resume", href: RESUME_URL },
           ].map((l) => (
             <a
               key={l.label}

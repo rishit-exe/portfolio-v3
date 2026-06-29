@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rishit Srivastava — Software Engineer",
+  title: "Rishit's Portfolio",
   description:
     "Performance-driven Software Engineer specializing in full-stack systems, mobile architecture, and distributed infrastructure.",
   authors: [{ name: "Rishit Srivastava" }],
+  icons: {
+    icon: "/favicon-black.ico",
+  },
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionHeader from "./SectionHeader";
+import { RESUME_URL } from "@/app/lib/constants";
 
 const PRINCIPLES = [
   {
@@ -95,7 +96,7 @@ export default function About() {
 
           <div style={{ marginTop: 8 }}>
             <a
-              href="https://drive.google.com/file/d/1pk-SruRoF2IJT8xAHWIipQ9BXWBNoWbQ/view?usp=sharing"
+              href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{

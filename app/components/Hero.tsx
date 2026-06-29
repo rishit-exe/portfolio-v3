@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { RESUME_URL } from "@/app/lib/constants";
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -598,7 +599,7 @@ export default function Hero() {
       >
         <div style={{ display: "flex", gap: 14, width: "100%", alignItems: "center" }} className="hero-cta-row1">
           <a
-            href="https://drive.google.com/file/d/1pk-SruRoF2IJT8xAHWIipQ9BXWBNoWbQ/view?usp=sharing"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
             style={{
